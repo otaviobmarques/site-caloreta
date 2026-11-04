@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>@media (prefers-color-scheme: dark) { .fundo { fill: #4A1A31; } }</style>
+  <rect class="fundo" width="64" height="64" rx="16" fill="#FFF4EA"/>
+  <path d="M30 15C26.5 8 21 6 16.5 7c1 5.5 5.5 9 13.5 9.5z" fill="#1C6B3F"/>
+  <path d="M33 16c3.5-7 10-9 15.5-7.2C46.5 14.3 41 17.5 33 17.5z" fill="#2E9A5E"/>
+  <ellipse cx="32" cy="36" rx="19" ry="17" fill="#B8195A"/>
+  <path d="M32 52c0 4 1.5 6 4 6" stroke="#B8195A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="25.3" cy="34" rx="2.6" ry="3.4" fill="#3B0D24"/>
+  <ellipse cx="38.7" cy="34" rx="2.6" ry="3.4" fill="#3B0D24"/>
+  <path d="M27.3 41q4.7 3.8 9.4 0" stroke="#3B0D24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="21.5" cy="40" rx="3" ry="1.8" fill="#E8508A"/>
+  <ellipse cx="42.5" cy="40" rx="3" ry="1.8" fill="#E8508A"/>
+  <path d="M20.5 28.5q2-5.5 7.5-6.5" stroke="#F6A3C3" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>
