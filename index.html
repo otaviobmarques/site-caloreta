@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Caloreta · Fotografou, estimou.</title>
+  <meta name="description" content="Tire a foto do prato e veja as calorias estimadas com base em tabelas brasileiras de alimentos. Você confere, ajusta e salva. Sem dieta da moda e sem culpa.">
+  <meta name="theme-color" content="#B8195A">
+  <link rel="canonical" href="https://caloreta.com.br/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Caloreta · Fotografou, estimou.">
+  <meta property="og:description" content="A foto do prato vira estimativa de calorias com tabelas brasileiras de alimentos. Você confere e salva.">
+  <meta property="og:url" content="https://caloreta.com.br/">
+  <meta property="og:image" content="https://caloreta.com.br/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/estilos.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <div class="progresso" aria-hidden="true"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="beti" viewBox="0 0 64 64">
+      <path d="M30 14C26 6 20 4 15 5c1 6 6 10 14 11z" fill="#1C6B3F"/>
+      <path d="M33 15c4-8 11-10 17-8-2 6-8 10-17 10z" fill="#2E9A5E"/>
+      <ellipse cx="32" cy="34" rx="20" ry="18" fill="#B8195A"/>
+      <path d="M32 51c0 6 2 8 5 8" stroke="#B8195A" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse class="olho" cx="25" cy="32" rx="2.4" ry="3.2" fill="#3B0D24"/>
+      <ellipse class="olho" cx="39" cy="32" rx="2.4" ry="3.2" fill="#3B0D24"/>
+      <path d="M27 39q5 4 10 0" stroke="#3B0D24" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="21" cy="38" rx="3" ry="1.8" fill="#E8508A"/>
+      <ellipse cx="43" cy="38" rx="3" ry="1.8" fill="#E8508A"/>
+      <path d="M20 26q2-6 8-7" stroke="#E8508A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Caloreta, início">
+      <svg class="marca-beti" aria-hidden="true"><use href="#beti"/></svg>
+      <span>Caloreta</span>
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#planos">Planos</a>
+      <a href="#perguntas">Perguntas</a>
+    </nav>
+    <a class="botao botao-pequeno" href="https://app.caloreta.com.br" data-cta="topo">Começar grátis</a>
+  </header>
+
+  <main id="inicio">
+    <!-- HERÓI -->
+    <section class="heroi">
+      <div class="heroi-fundo" aria-hidden="true">
+        <span class="bolha b1"></span><span class="bolha b2"></span><span class="bolha b3"></span>
+      </div>
+      <div class="heroi-texto">
+        <p class="selo-topo revelar"><span class="ponto"></span> Feito para a comida brasileira</p>
+        <h1 class="titulo-heroi" aria-label="Fotografou, estimou.">
+          <span class="palavra" style="--i:0">Fotografou,</span>
+          <span class="palavra destaque" style="--i:1">estimou.</span>
+        </h1>
+        <p class="sub-heroi revelar" style="--atraso:.35s">
+          Tire a foto do prato. A Beti reconhece o que tem nele, você confere e salva.
+          As calorias vêm de tabelas brasileiras de alimentos, do arroz com feijão ao cuscuz.
+          <strong>Sem dieta da moda e sem culpa.</strong>
+        </p>
+        <div class="acoes revelar" style="--atraso:.5s">
+          <a class="botao" href="https://app.caloreta.com.br" data-cta="heroi">
+            Começar grátis
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="botao botao-contorno" href="#como-funciona">Ver como funciona</a>
+        </div>
+        <ul class="garantias revelar" style="--atraso:.65s">
+          <li>3 fotos grátis por semana</li>
+          <li>Busca sem limite</li>
+          <li>Sem cartão</li>
+        </ul>
+      </div>
+
+      <div class="heroi-visual" data-inclinar>
+        <div class="celular celular-heroi">
+          <div class="tela">
+            <img src="/img/tela-analise.webp" width="780" height="1688" alt="Tela da Caloreta conferindo um prato com arroz, feijão, frango e salada: total estimado de 231 kcal, calculado pela TACO." fetchpriority="high">
+            <span class="varredura" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="flutuante f1" aria-hidden="true"><span class="f-icone verde">✓</span><div><b>Feijão, carioca</b><small>Confiança alta · 68 kcal</small></div></div>
+        <div class="flutuante f2" aria-hidden="true"><span class="f-icone ambar">?</span><div><b>É arroz branco ou integral?</b><small>A Beti pergunta quando fica em dúvida</small></div></div>
+        <div class="flutuante f3" aria-hidden="true"><b class="f-num" data-contar="406">0</b><small>kcal no almoço</small></div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE COMIDAS -->
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa-trilho">
+        <span>arroz com feijão</span><span>cuscuz</span><span>tapioca</span><span>pão de queijo</span><span>macaxeira</span><span>açaí</span><span>feijoada</span><span>pão de sal</span><span>baião de dois</span><span>moqueca</span><span>jerimum</span><span>farofa</span><span>PF de frango</span><span>mexerica</span>
+        <span>arroz com feijão</span><span>cuscuz</span><span>tapioca</span><span>pão de queijo</span><span>macaxeira</span><span>açaí</span><span>feijoada</span><span>pão de sal</span><span>baião de dois</span><span>moqueca</span><span>jerimum</span><span>farofa</span><span>PF de frango</span><span>mexerica</span>
+      </div>
+    </div>
+
+    <!-- COMO FUNCIONA (rolagem com celular fixo) -->
+    <section class="como" id="como-funciona">
+      <header class="cabeca-secao revelar">
+        <p class="sobretitulo">Como funciona</p>
+        <h2>Três toques entre o prato e o diário.</h2>
+      </header>
+      <div class="como-grade">
+        <div class="como-passos">
+          <article class="passo" data-passo="0">
+            <span class="passo-num">1</span>
+            <h3>Tire a foto</h3>
+            <p>Do PF do almoço ao lanche da tarde. A foto é reduzida no celular e sai sem localização e sem os dados da câmera.</p>
+          </article>
+          <article class="passo" data-passo="1">
+            <span class="passo-num">2</span>
+            <h3>A Beti reconhece</h3>
+            <p>Ela diz o que viu e estima as gramas de cada item. Ficou em dúvida? Ela pergunta antes de mostrar o número: <em>“É arroz branco ou integral?”</em></p>
+          </article>
+          <article class="passo" data-passo="2">
+            <span class="passo-num">3</span>
+            <h3>Você confere e salva</h3>
+            <p>Ajuste as gramas, troque um item, adicione o que faltou. As calorias são recalculadas na hora pela tabela e o dia se monta sozinho.</p>
+          </article>
+        </div>
+        <div class="como-palco" aria-hidden="true">
+          <div class="celular">
+            <div class="tela tela-troca">
+              <div class="camada camera ativa" data-camada="0">
+                <img src="/img/prato.webp" width="1024" height="768" alt="" loading="lazy">
+                <span class="mira m1"></span><span class="mira m2"></span><span class="mira m3"></span><span class="mira m4"></span>
+                <span class="camera-dica">Enquadre o prato</span>
+                <span class="disparador"></span>
+              </div>
+              <img class="camada" data-camada="1" src="/img/tela-analise.webp" width="780" height="1688" alt="" loading="lazy">
+              <img class="camada" data-camada="2" src="/img/tela-diario.webp" width="780" height="1688" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIANÇA -->
+    <section class="confianca" id="confianca">
+      <div class="confianca-texto revelar">
+        <p class="sobretitulo claro">De onde vêm os números</p>
+        <h2>Calorias de tabela,<br><span class="riscado">não de palpite.</span></h2>
+        <p>A IA só identifica os alimentos e estima as porções. Os números vêm da <b>TACO</b> (NEPA/UNICAMP) e de outras tabelas de composição de alimentos. Quando a tabela não publica um valor, aparece “—”. A gente nunca inventa um zero.</p>
+      </div>
+      <dl class="numeros">
+        <div class="numero revelar" style="--atraso:.05s"><dt>alimentos na base</dt><dd data-contar="18390">0</dd></div>
+        <div class="numero revelar" style="--atraso:.15s"><dt>tabelas de composição</dt><dd data-contar="5">0</dd></div>
+        <div class="numero revelar" style="--atraso:.25s"><dt>fotos guardadas</dt><dd>0</dd></div>
+      </dl>
+      <ul class="fontes revelar" aria-label="Tabelas usadas">
+        <li>TACO · NEPA/UNICAMP</li><li>TBCA · USP/FoRC</li><li>POF · IBGE</li><li>USDA FoodData Central</li><li>CoFID · Reino Unido</li>
+      </ul>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="recursos" id="recursos">
+      <header class="cabeca-secao revelar">
+        <p class="sobretitulo">Recursos</p>
+        <h2>Tudo para acompanhar o que você come, sem virar trabalho.</h2>
+      </header>
+      <div class="bento">
+        <article class="cartao c-grande revelar" data-brilho>
+          <div class="cartao-texto">
+            <span class="etiqueta">Sem foto também vale</span>
+            <h3>Busca que fala a sua língua</h3>
+            <p>Macaxeira, jerimum, pão de sal, mexerica: a busca entende nomes regionais. Repita a refeição de ontem, use os favoritos ou só as calorias com a adição rápida. Sem limite em nenhum plano.</p>
+          </div>
+          <div class="cartao-tela"><img src="/img/tela-busca.webp" width="780" height="1688" alt="Busca por “pão frances” mostrando pão francês da TACO com 300 kcal por 100 g." loading="lazy"></div>
+        </article>
+        <article class="cartao revelar" style="--atraso:.08s" data-brilho>
+          <span class="icone-cartao" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6v12M7 6v12M10 6v12M14 6v12M16 6v12M20 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Código de barras</h3>
+          <p>Produtos embalados com os valores do rótulo. Não achou? Cadastre uma vez e fica para todo mundo.</p>
+        </article>
+        <article class="cartao revelar" style="--atraso:.16s" data-brilho>
+          <span class="icone-cartao" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 0 1-16 0Zm4-4c0-2 2-2 2-4m4 4c0-2 2-2 2-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Receitas que se calculam</h3>
+          <p>Monte a sua com os ingredientes da base ou salve uma foto analisada como receita. A caloria por porção sai sozinha.</p>
+        </article>
+        <article class="cartao c-largo revelar" data-brilho>
+          <div class="cartao-texto">
+            <span class="etiqueta">Sua semana num olhar</span>
+            <h3>Gráfico, médias e macros</h3>
+            <p>Veja as calorias de cada dia, a média da semana, a água e, a partir do Básico, proteína, carboidrato e gordura.</p>
+          </div>
+          <div class="cartao-tela"><img src="/img/tela-semana.webp" width="780" height="1688" alt="Tela Sua semana com gráfico de calorias dos últimos 7 dias, média de 796 kcal e macronutrientes médios." loading="lazy"></div>
+        </article>
+        <article class="cartao revelar" style="--atraso:.08s" data-brilho>
+          <span class="icone-cartao" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Água e peso, sem pressão</h3>
+          <p>Um toque para cada copo. Peso é opcional, com tendência e sem meta de corpo ou “peso ideal”.</p>
+        </article>
+        <article class="cartao revelar" style="--atraso:.16s" data-brilho>
+          <span class="icone-cartao" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8v6m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Instala como app</h3>
+          <p>Abra no celular e adicione à tela de início. Funciona no Android e no iPhone, sem passar pela loja.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="galeria" aria-labelledby="titulo-galeria">
+      <header class="cabeca-secao revelar">
+        <p class="sobretitulo">Por dentro</p>
+        <h2 id="titulo-galeria">Bonito de usar todo dia.</h2>
+      </header>
+      <div class="galeria-trilho" tabindex="0" aria-label="Telas do app (role para o lado)">
+        <figure class="revelar"><div class="celular"><div class="tela"><img src="/img/tela-diario.webp" width="780" height="1688" alt="Diário de hoje com anel de calorias restantes e refeições do dia." loading="lazy"></div></div><figcaption>Diário do dia</figcaption></figure>
+        <figure class="revelar" style="--atraso:.08s"><div class="celular"><div class="tela"><img src="/img/tela-analise2.webp" width="780" height="1688" alt="Conferência da foto com itens, gramas e confiança de cada um." loading="lazy"></div></div><figcaption>Conferência da foto</figcaption></figure>
+        <figure class="revelar" style="--atraso:.16s"><div class="celular"><div class="tela"><img src="/img/tela-alimento.webp" width="780" height="1688" alt="Detalhe do pão francês com quantidade em gramas e valores por 100 g." loading="lazy"></div></div><figcaption>Porção na medida</figcaption></figure>
+        <figure class="revelar" style="--atraso:.24s"><div class="celular"><div class="tela"><img src="/img/tela-receitas.webp" width="780" height="1688" alt="Tela de receitas com filtros Cabe no meu dia, Até 20 min e Mais proteína." loading="lazy"></div></div><figcaption>Receitas</figcaption></figure>
+        <figure class="revelar" style="--atraso:.32s"><div class="celular"><div class="tela"><img src="/img/tela-semana.webp" width="780" height="1688" alt="Resumo da semana com gráfico e médias." loading="lazy"></div></div><figcaption>Sua semana</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- PRIVACIDADE -->
+    <section class="privacidade">
+      <div class="priv-cartao revelar">
+        <div class="cadeado" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="10" y="21" width="28" height="20" rx="5" fill="currentColor"/><path d="M16 21v-5a8 8 0 0 1 16 0v5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="24" cy="30" r="3" fill="#FFF4EA"/><path d="M24 32v4" stroke="#FFF4EA" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <p class="sobretitulo">Privacidade</p>
+          <h2>Sua foto não fica guardada.</h2>
+          <ul class="lista-check">
+            <li>A foto é analisada e descartada. Sem localização e sem os dados da câmera.</li>
+            <li>Você autoriza o uso dos dados de saúde e o envio das fotos em telas separadas, e pode revogar quando quiser.</li>
+            <li>Seu diário não é vendido nem usado para publicidade. Exporte tudo quando quiser.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="planos" id="planos">
+      <header class="cabeca-secao revelar">
+        <p class="sobretitulo">Planos</p>
+        <h2>Comece grátis. Cresça quando quiser.</h2>
+        <p class="cabeca-sub">Registro pela busca, favoritos e repetir refeição não têm limite em nenhum plano.</p>
+      </header>
+      <div class="planos-grade">
+        <article class="plano revelar">
+          <h3>Grátis</h3>
+          <p class="preco"><b>R$ 0</b></p>
+          <ul class="lista-check">
+            <li>3 fotos com IA por semana</li>
+            <li>Busca, favoritos e repetir sem limite</li>
+            <li>Até 5 receitas suas</li>
+            <li>Água e resumo da semana</li>
+          </ul>
+          <a class="botao botao-contorno" href="https://app.caloreta.com.br" data-cta="plano-gratis">Começar grátis</a>
+        </article>
+        <article class="plano revelar" style="--atraso:.08s">
+          <h3>Básico</h3>
+          <p class="preco"><b>R$ 14,90</b><span>/mês</span></p>
+          <ul class="lista-check">
+            <li>4 fotos com IA por dia</li>
+            <li>Proteína, carboidrato e gordura</li>
+            <li>Peso e tendência</li>
+            <li>Receitas ilimitadas e foto como receita</li>
+          </ul>
+          <a class="botao botao-contorno" href="https://app.caloreta.com.br" data-cta="plano-basico">Começar</a>
+        </article>
+        <article class="plano plano-destaque revelar" style="--atraso:.16s">
+          <span class="fita">7 dias grátis</span>
+          <h3>Plus</h3>
+          <p class="preco"><b>R$ 29,90</b><span>/mês</span></p>
+          <ul class="lista-check">
+            <li>10 fotos com IA por dia</li>
+            <li>Tudo do Básico</li>
+            <li>“Cabe no meu dia” nas receitas</li>
+            <li>Teste grátis por 7 dias</li>
+          </ul>
+          <a class="botao" href="https://app.caloreta.com.br" data-cta="plano-plus">Começar</a>
+        </article>
+      </div>
+      <p class="nota-planos revelar">Cancele quando quiser, sem multa. As assinaturas pelo site abrem em breve; comece agora pelo plano Grátis.</p>
+    </section>
+
+    <!-- PERGUNTAS -->
+    <section class="perguntas" id="perguntas">
+      <header class="cabeca-secao revelar">
+        <p class="sobretitulo">Perguntas</p>
+        <h2>Dúvidas comuns.</h2>
+      </header>
+      <div class="faq">
+        <details class="revelar"><summary>A Caloreta é uma dieta?</summary><div><p>Não. A Caloreta estima as calorias do que você come para você acompanhar a sua alimentação. Ela não monta plano alimentar, não faz diagnóstico e não promete resultado. Para orientação, procure um nutricionista ou médico.</p></div></details>
+        <details class="revelar"><summary>A estimativa é exata?</summary><div><p>É uma estimativa. A IA reconhece os alimentos e estima as gramas; as calorias vêm das tabelas de composição. Por isso você sempre confere antes de salvar e pode ajustar as gramas ou trocar um item.</p></div></details>
+        <details class="revelar"><summary>Funciona com comida brasileira?</summary><div><p>Foi feita para ela. A base usa a TACO (NEPA/UNICAMP), a TBCA (USP) e a POF (IBGE), além de tabelas internacionais para o que não tem aqui, e a busca entende nomes regionais.</p></div></details>
+        <details class="revelar"><summary>Preciso tirar foto de tudo?</summary><div><p>Não. Você pode buscar o alimento, repetir uma refeição, usar favoritos, ler o código de barras ou lançar só as calorias. Nada disso tem limite.</p></div></details>
+        <details class="revelar"><summary>O que acontece com a minha foto?</summary><div><p>Ela é reduzida no celular, enviada sem localização para análise por IA e descartada logo depois. A Caloreta não guarda a foto.</p></div></details>
+        <details class="revelar"><summary>Como instalo no celular?</summary><div><p>Abra <b>app.caloreta.com.br</b> no celular. No Android, toque em “Instalar app”. No iPhone, toque em Compartilhar e depois em “Adicionar à Tela de Início”.</p></div></details>
+        <details class="revelar"><summary>Quem pode usar?</summary><div><p>Pessoas com 18 anos ou mais.</p></div></details>
+      </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="final">
+      <div class="final-cartao revelar">
+        <svg class="final-beti" aria-hidden="true"><use href="#beti"/></svg>
+        <h2>Bora conhecer a Beti?</h2>
+        <p>Tire a foto do próximo prato e veja a estimativa em segundos.</p>
+        <a class="botao botao-claro" href="https://app.caloreta.com.br" data-cta="final">Começar grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-topo">
+      <a class="marca" href="#inicio"><svg class="marca-beti" aria-hidden="true"><use href="#beti"/></svg><span>Caloreta</span></a>
+      <nav aria-label="Rodapé">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#perguntas">Perguntas</a>
+        <a href="https://app.caloreta.com.br">Entrar no app</a>
+      </nav>
+    </div>
+    <p class="aviso"><b>Estimativa aproximada. Não substitui orientação de nutricionista ou médico.</b> Uso apenas para maiores de 18 anos.</p>
+    <p class="citacoes">Valores nutricionais: TACO – Tabela Brasileira de Composição de Alimentos, NEPA/UNICAMP; TBCA – Tabela Brasileira de Composição de Alimentos, USP/FoRC; POF 2017–2018, IBGE; USDA FoodData Central; CoFID, Reino Unido. As tabelas não foram desenvolvidas pela Caloreta.</p>
+    <p class="direitos">© <span data-ano>2026</span> Caloreta · Domma Tecnologia</p>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
