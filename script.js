@@ -123,3 +123,49 @@
     trilho.addEventListener('dragstart', (ev) => ev.preventDefault());
   }
 })();
+
+// Planos lidos do banco (preço, fotos e recursos editados no painel do admin). Se não carregar, fica o texto da página.
+(() => {
+  const SUPABASE = 'https://ugvkxgahuxgkljwfpnca.supabase.co';
+  const CHAVE_PUBLICA = 'sb_publishable_9eaDD7t54jvpa-P3m99joQ_WqJYeE5C'; // chave pública (só lê o catálogo de planos)
+  const NOME_RECURSO = {
+    macros: 'Proteína, carboidrato e gordura',
+    peso: 'Peso e tendência',
+    foto_como_receita: 'Salvar foto como receita',
+    cabe_no_meu_dia: '“Cabe no meu dia” nas receitas',
+  };
+  const NOME_MEIO = { pix: 'Pix', cartao: 'cartão de crédito', boleto: 'boleto' };
+  const real = (c) => (c / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: c % 100 ? 2 : 0 });
+  const lista = (itens) => itens.map((t) => { const li = document.createElement('li'); li.textContent = t; return li; });
+  const juntar = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} ou ${xs[xs.length - 1]}`);
+  const h = { apikey: CHAVE_PUBLICA, Authorization: `Bearer ${CHAVE_PUBLICA}` };
+
+  Promise.all([
+    fetch(`${SUPABASE}/rest/v1/planos?select=id,nome,preco_centavos,fotos_limite,fotos_periodo,receitas_limite,recursos&order=preco_centavos`, { headers: h }).then((r) => (r.ok ? r.json() : null)),
+    fetch(`${SUPABASE}/rest/v1/rpc/meios_pagamento_web`, { method: 'POST', headers: { ...h, 'content-type': 'application/json' }, body: '{}' }).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+  ]).then(([planos, meios]) => {
+    if (!Array.isArray(planos) || !planos.length) return;
+    const formas = Array.isArray(meios?.meios) ? meios.meios.map((m) => NOME_MEIO[m]).filter(Boolean) : ['Pix', 'cartão de crédito'];
+    const ativos = new Set(planos.map((p) => p.id));
+    document.querySelectorAll('[data-plano]').forEach((card) => {
+      const p = planos.find((x) => x.id === card.dataset.plano);
+      if (!ativos.has(card.dataset.plano)) { card.remove(); return; }
+      card.querySelector('h3').textContent = p.nome;
+      const preco = card.querySelector('.preco');
+      preco.innerHTML = '';
+      const b = document.createElement('b'); b.textContent = real(p.preco_centavos); preco.append(b);
+      if (p.preco_centavos > 0) { const s = document.createElement('span'); s.textContent = '/mês'; preco.append(s); }
+      const r = p.recursos || {};
+      const itens = [
+        `${p.fotos_limite} ${p.fotos_limite === 1 ? 'foto' : 'fotos'} com IA por ${p.fotos_periodo === 'dia' ? 'dia' : 'semana'}`,
+        'Busca, favoritos e repetir sem limite',
+        p.receitas_limite === null ? 'Receitas ilimitadas' : `Até ${p.receitas_limite} receitas suas`,
+        ...Object.keys(NOME_RECURSO).filter((k) => r[k]).map((k) => NOME_RECURSO[k]),
+      ];
+      if (p.preco_centavos === 0) itens.push('Água e resumo da semana');
+      card.querySelector('.lista-check').replaceChildren(...lista(itens));
+    });
+    const nota = document.querySelector('[data-nota-planos]');
+    if (nota && formas.length) nota.textContent = `Pague com ${juntar(formas)}. Cancele quando quiser, sem multa.`;
+  }).catch(() => {});
+})();
