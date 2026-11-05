@@ -379,3 +379,25 @@ section { scroll-margin-top: 90px; }
   .destaque::after, .riscado::after { transform: scaleX(1); }
   .faixa-trilho { flex-wrap: wrap; width: auto; justify-content: center; }
 }
+
+/* Páginas de texto (Privacidade, Termos) */
+.pagina-texto .topo { position: sticky; top: 12px; transform: none; left: auto; margin: 12px auto 0; }
+.doc { max-width: 780px; margin: 0 auto; padding: 56px 20px 80px; }
+.doc h1 { font: 400 clamp(40px, 6vw, 64px)/1.02 'Lilita One', sans-serif; margin: 10px 0 10px; }
+.doc-data { color: var(--texto2); font-weight: 700; font-size: 15px; }
+.doc h2 { font: 400 28px/1.15 'Lilita One', sans-serif; margin: 0 0 14px; }
+.doc h3 { font-size: 18px; font-weight: 800; margin: 22px 0 8px; }
+.doc section { padding: 34px 0 6px; border-top: 1px solid var(--borda); margin-top: 34px; scroll-margin-top: 100px; }
+.doc p, .doc li { color: #4d2a3a; }
+.doc p + p { margin-top: 12px; }
+.doc ul, .doc ol { padding-left: 22px; margin: 10px 0 0; display: grid; gap: 8px; }
+.doc a { color: var(--rosa); font-weight: 700; }
+.doc b { color: var(--vinho); }
+.resumo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 30px 0 10px; }
+.resumo div { padding: 18px; border-radius: 18px; background: var(--folha-fundo); border: 1px solid #cfe7d7; display: grid; gap: 4px; }
+.resumo b { color: var(--folha); }
+.resumo span { color: var(--texto2); font-size: 15px; line-height: 1.45; }
+.indice { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.indice a { text-decoration: none; padding: 6px 12px; border-radius: 99px; background: var(--branco); border: 1px solid var(--borda); font-weight: 700; font-size: 14px; color: var(--texto2); }
+.indice a:hover { color: var(--rosa); border-color: var(--rosa-pastel); }
+@media (max-width: 640px) { .resumo { grid-template-columns: 1fr; } .doc { padding-top: 36px; } }
