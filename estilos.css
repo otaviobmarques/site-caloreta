@@ -320,6 +320,10 @@ section { scroll-margin-top: 90px; }
 .rodape nav a { text-decoration: none; font-weight: 700; }
 .rodape nav a:hover { color: var(--rosa); }
 .rodape p + p { margin-top: 10px; }
+.creditos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 40px; margin: 26px 0 8px; padding-top: 22px; border-top: 1px solid var(--borda); }
+.credito { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; }
+.credito img { height: auto; display: block; }
+.creditos + .direitos { text-align: center; }
 .aviso b { color: var(--vinho); }
 .olho { transform-box: fill-box; transform-origin: center; animation: piscar 5s infinite; }
 @keyframes piscar { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(.1); } }
